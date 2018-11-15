@@ -81,6 +81,13 @@ public class RankSelectInv extends CustomInventory {
                 "&9-----------------------------------------",
                 "&fClick to grant &d" + p.getName() + " &fthe &dCo-Owner &frank.",
                 "&9-----------------------------------------"});
+        
+        setItem(10, new ItemStack(Material.WOOL, 1, (byte) 3), player -> {
+            new GrantReasonInv(p, "test", op).open(player);
+        }, "&9&lCo-Owner", new String[]{
+                "&9-----------------------------------------",
+                "&fClick to grant &d" + p.getName() + " &fthe &dtest &frank.",
+                "&9-----------------------------------------"});
 
         setItem(13, new ItemStack(Material.WOOL, 1, (byte) 14), player -> {
             new GrantReasonInv(p, "Owner", op).open(player);
